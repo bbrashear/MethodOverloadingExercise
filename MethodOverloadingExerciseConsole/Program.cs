@@ -7,13 +7,19 @@ namespace MethodOverloadingExerciseConsole
         static void Main(string[] args)
         {
 
-            Console.WriteLine("How many dollars are in your pocket?");
+            Console.WriteLine("Give me a number to add");
             int a = int.Parse(Console.ReadLine());
-            Console.WriteLine("How many dollars are in your friend's pocket?");
+            Console.WriteLine("Give me another number to add");
             int b = int.Parse(Console.ReadLine());
+
+            
+            Console.WriteLine("How many dollars are in your pocket?");
+            int x = int.Parse(Console.ReadLine());
+            Console.WriteLine("How many dollars are in your friend's pocket?");
+            int y = int.Parse(Console.ReadLine());
             Console.WriteLine("True or False: Do you like money?");
             bool isTrue = bool.Parse(Console.ReadLine());
-            Console.WriteLine(Add(a, b, isTrue));
+            Console.WriteLine(Add(x, y, isTrue));
 
 
 
@@ -29,12 +35,12 @@ namespace MethodOverloadingExerciseConsole
             return a + b;
         }
 
-        public static string Add(int a, int b, bool isTrue)
+        public static string Add(int x, int y, bool isTrue)
         {
 
             if (isTrue)
             {
-                int c = a + b;
+                int c = x + y;
 
                 if (c == 1)
                 {
